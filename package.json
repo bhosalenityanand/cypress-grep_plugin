@@ -1,0 +1,26 @@
+{
+  "name": "cy_grep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:tag:Smoke": "cypress run --env grepTags=\"@Sanity\"",
+    "test:tag:DevopsAndTest1": "cypress run --env grepTags=\"@Test1+@Devops \"",
+    "test:tag:Sanity": "cypress run --env grepTags=\"@sanity\"",
+    "test:Test1": "cypress run --env grep=\"Test1\"",
+    "test:tag:invertTest": "cypress run --env grepTags=\"-@Sanity \"",
+    "test:tag:invertSanity": "cypress run --env grepTags=\"-@Sanity \" --spec \"cypress/integration/group_test/test_2.spec.js\"",
+    "test:tag:Test1": "cypress run --env grepTags=\"@Test1 \"",
+    "test:Smoke": "cypress run --env grep=\"-Smoke \""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "9.7",
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "cypress-grep": "^2.5.2"
+  }
+}
